@@ -37,6 +37,7 @@
 
 			</plugin>
 			
+			
 			<plugin>
                     <groupId>org.apache.tomcat.maven</groupId>
                     <artifactId>tomcat7-maven-plugin</artifactId>
@@ -49,7 +50,24 @@
                     </configuration>
                 </plugin>
 			
-		</plugins>
+			
+			
+			
+		
+    
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.7.2</version>
+            <configuration>
+                <includes>
+                    <include>**/${testGroup}/*Test.java</include>
+                </includes>
+            </configuration>
+        </plugin>
+    </plugins>
+
+	
 
 
 
